@@ -30,6 +30,13 @@ minio_server_release: ""
 minio_client_release: ""
 ```
 
+Install using RPM packages. The value can be set to the package name (minio/mcli) if an already configured repository provides it, or to the full url to the rpm package.
+
+```yaml
+minio_server_install_rpm: ""
+minio_client_install_rpm: ""
+```
+
 Release to install for both server and client; lastest if the default.
 Can be 'RELEASE.2019-06-27T21-13-50Z' for instance.
 
