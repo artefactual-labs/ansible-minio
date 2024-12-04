@@ -46,3 +46,6 @@ minio_secret_key: ""
 minio_install_server: true
 minio_configure_server: true
 minio_install_client: true
+
+# Use systemd credentials
+minio_systemd_credentials: false
