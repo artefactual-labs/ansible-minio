@@ -21,6 +21,15 @@
   when: minio_server_make_datadirs
   with_items: "{{ minio_server_datadirs }}"
 
+- name: "Include MinIO systemd creds"
+  include: systemd-creds.yml
+  vars:
+    service: minio
+    secret_name: minio
+    credentials:
+      MINIO_SECRET_KEY: "{{ minio_secret_key }}"
+  when: minio_systemd_credentials|bool
+
 - name: Generate the Minio server envfile
   template:
     src: minio.env.j2
